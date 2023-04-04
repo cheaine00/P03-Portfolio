@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="../assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.111.3">
+    <title>Carousel Template · Bootstrap v5.3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/carousel.rtl.css">
+ 
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check2" viewBox="0 0 16 16">
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+  <symbol id="circle-half" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+  </symbol>
+  <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+  </symbol>
+  <symbol id="sun-fill" viewBox="0 0 16 16">
+    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+  </symbol>
+</svg>
+
+<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+  <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+          id="bd-theme"
+          type="button"
+          aria-expanded="false"
+          data-bs-toggle="dropdown"
+          aria-label="Toggle theme (auto)">
+    <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+    <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+    <li>
+      <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+        <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+        Light
+        <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+      </button>
+    </li>
+    <li>
+      <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+        <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+        Dark
+        <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+      </button>
+    </li>
+    <li>
+      <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+        <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        Auto
+        <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+      </button>
+    </li>
+  </ul>
+</div>
+
+
+<header data-bs-theme="dark">
+<div class="collapse text-bg-dark" id="navbarHeader">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-md-7 py-4">
+      <h4>About</h4>
+      <p class="text-body-secondary">I am a fourth year student and junior designer at Simon Fraser University in 
+        Interactive Art & Technology major. Paul Rand is a graphic designer who has
+        created world famous logos and unique layouts. He proved using simple shapes
+        and dominant colours can make great work and manipulate symbols through 
+        juxtaposition and association. My goal is to become a successful freelance 
+        designer who has a diverse and distinct style like Paul Rand in 10 years.</p>
+    </div>
+    <div class="col-sm-4 offset-md-1 py-4">
+      <h4>Contact</h4>
+      <ul class="listing">
+        <li><a href="https://www.linkedin.com/in/elaine-lee-4b7743236" class="text-white">Link to LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/che_aine00/" class="text-white">Link to Instagram</a></li>
+        <li><a href="#" class="text-white">Email: cla389@sfu.ca</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<div class="navbar navbar-dark bg-dark shadow-sm">
+<div class="container">
+  <a href="index.html"  class="navbar-brand d-flex align-items-center">
+    <strong>Elaine Lee</strong>
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</div>
+</div>
+</header>
+
+
+
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#52b0a0"/></svg>
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>BRAND DESIGN GUIDE </h1>
+            <h2>Branding</h2>
+            <p>Vorum has been the global leader in orthotics and prosthetics CAD/CAM technology for over 30 years, mainly dedicated to the development of CAD/CAM solutions for the design and fabrication of custom O&P devices.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#52b0a0"/></svg>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>COOP PROJECT (Collaborative Project)</h1>
+            <p> My Co-op Partner (Graphic Designer) and I were assigned to adjust and develop stronger Vorum's Brand Guide. Design Style Guides help everyone in the business maintain brand consistency. This brand guideline consist of visual elements to help communicate colour usage, brand tone and voice, typography, patterns, and brand principles. It is important to create a cohesive design system for Vorum's own business and brand.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#52b0a0"/></svg>
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Skills/Tools</h1>
+            <p>Adobe Creative Suite</p>
+            <p>Figma</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+   
+
+
+    <!-- START THE FEATURETTES -->
+    <hr class="featurette-divider">
+
+    
+
+    <div class="row featurette">
+      <div class="col-md-8">
+        <h2 class="featurette-heading fw-normal lh-1">Typeface </h2>
+        <p class="lead">These are the typefaces we will be using: Lato, Overpass, and Roboto.
+          Both Lato and Overpass are used as headers and sub-headers- Lato is always in all capitals and bolded heavily, this will often be used for titles. Use Lato sparingly as to not overwhelm any designs as it is a very heavy design element. Overpass will be used in either bold or semi-bold weights, it utilises regular capitalization. Both of these fonts are solid elements in social media advertising, website graphics, product brochures, etc.</p>
+      </div>
+      <div class="col-md-5">
+        <img src="https://carbon-media.accelerator.net/0000000mcZM/lHrPKy5m37Fg3W3BIh1VEH;1098x1202.png?auto=webp" alt="storyboard" width="500" height="500" >
+    </div>
+    <div class="col-md-5">
+      <img src="https://carbon-media.accelerator.net/0000000mcZM/4nGb7S5TWCje9G1IhWdh6K;1190x1302.png?auto=webp" alt="storyboard" width="500" height="500" >
+  </div>
+      
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-8">
+        <h2 class="featurette-heading fw-normal lh-1">Colour & Graphic</h2>
+        <p class="lead"> Vorum has three key colours: Marine Blue (#174363), Vorum Red (#A30234), and Dark Blue (#0E2130). This is the main colour palette associated with our branding; while some of our material uses an off-white yellow (#FCF8EE) as a background colour. In addition to our main palette, we have also provided a variety of swatches. While our main colour is Vorum Red, it is to be used as an accent colour as to not overwhelm any designs. Instead, Marine Blue is used as our primary colour to contrast the red and bring focus to that red.
+
+          General direction for graphics goes as follows: clean, bold colours with simple shapes. Colours should be kept flat, and shapes should rarely overlap each other- the only exception being when used behind an image as an additional accent. The idea is to keep our design simple and clean, so as to create a friendlier user experience to replicate our company goals.
+          
+          Parallelograms are used throughout marketing and collateral. Angles can vary depending on the design but should be prominent, parallelograms should also decrease in width the closer it is to a corner. These parallelograms are primarily used in the corner of designs and should be at a lower opacity.</p>
+      </div>
+      <div class="col-md-5">
+        <img src="https://carbon-media.accelerator.net/0000000mcZM/1ChuXVDXeslczvoWKPqEP6;1190x1488.png?auto=webp" alt="storyboard" width="500" height="500" >
+    </div>
+    <div class="col-md-5">
+      <img src="https://carbon-media.accelerator.net/0000000mcZM/g3yi8wxAiBogkdatT8VkmC;1190x1488.png?auto=webp" alt="storyboard" width="500" height="500" >
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-8">
+      <h2 class="featurette-heading fw-normal lh-1">Social Media Graphics</h2>
+      <p class="lead">Graphics with photos should include person wearing an O&P device; photos should be edited according to photography standards stated earlier. An overlay may be used over photos if necessary. Unless stated otherwise, photos should have vector shapes and text over it. Standard vector shapes include but are not limited to: abstract lines, polygons, long rectangular shapes, etc. The opacity for vector shapes may be lowered to create harmony with the photo.</p>
+    </div>
+    <div class="col-md-5">
+      <img src="https://carbon-media.accelerator.net/0000000mcZM/lKGwwJybZOhcT5aMfTK2JY;1190x1354.png?auto=webp" alt="storyboard" width="500" height="500" >
+  </div>
+  <div class="col-md-5">
+    <img src="https://carbon-media.accelerator.net/0000000mcZM/gJQ4WdhAwRrbeG9pYGj4nK;1190x1354.png?auto=webp" alt="storyboard" width="500" height="500" >
+</div>
+      
+
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-8">
+    <h2 class="featurette-heading fw-normal lh-1">Photography</h2>
+    <p class="lead">Clinic photos should be portrayed in a clean room with little to no clutter. 
+      Product photography should show products and instruments cleanly. 
+      Patient Photography should include usage of devices in daily life. Preferably active, outdoor shots.
+      Adding a colour overlay to the picture makes the photo less busy. It can be used as a neat and clean background that can be harmonized with graphic shapes. It also supports the photo to stay within the company’s colour palette. Picture overlay style is better to use in a large print, panel, and booth design rather than digital graphic works. Photos inside the logo are clear when it comes to a big print</p>
+  </div>
+  <div class="col-md-5">
+    <img src="https://carbon-media.accelerator.net/0000000mcZM/jslTKe2xF1beQwbx06yWXc;1098x1374.png?auto=webp" alt="storyboard" width="500" height="500" >
+</div>
+<div class="col-md-5">
+  <img src="https://carbon-media.accelerator.net/0000000mcZM/lUD5pjC0XzvckgOn3THBKM;1190x1488.png?auto=webp" alt="storyboard" width="500" height="500" >
+</div>
+
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading fw-normal lh-1">Challenges/Solution</span></h2>
+    <p class="lead">When it comes to brand design, I only of logo design, editing design, dedicated font development, brand guidelines, and aesthetics as important. I realized it is a false explanation that does not reflect the trend. As the brand experience gradually advanced, the role of brand designers also advanced. Following the design that creates the first brand image, the design that helps the brand grow is also very important and needs profound insight. I learned that the role of a brand designer is not to end with the appearance of a brand that is only visible, but also to the essential work of helping the brand grow. </p>
+  </div>
+
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-8">
+    <h2 class="featurette-heading fw-normal lh-1">What I Learned / Takeaways</h2>
+    <p class="lead"> Brand Styleguide was the project that I started right after I joined the company, so all I did was try to finish the guide as fast as possible so that I can use this guide for future projects . However, I did not understand the company clearly, and I started to create styles that deviate from the design Vorum wanted.  I stopped designing and creating style guides and began to study and understand Vorum, products, goals, marketing, and targets intensively. As I fully understood and analyzed the company, it began to be easy to know which design and affinity fit and what should be developed further. In the eight months I worked at Vorum, I completed a lot of projects and made videos, and I was able to better understand and decide what was appropriate and necessary for the brand style.</p>
+  </div>
+
+
+    <!-- /END THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2017–2023 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</main>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>
