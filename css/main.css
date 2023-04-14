@@ -1,4 +1,19 @@
+body {
+  padding-bottom: 20px;
+}
+p{
+  color:white;
+}
+h2{
+  color:white;
+}
+h3{
+  text-align: center;
+}
 
+li{
+  padding: 0.5rem;
+}
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
